@@ -12,12 +12,15 @@ All required data-testid attributes included.
 
 Running Locally
 
-Clone the repo: git clone <repo-url>
+Clone the repo: 
+
+    git clone https://github.com/slattware/profile_card.git
+
 Open index.html in a browser (no build step needed).
 
 Tests
 Automated tests can target the data-testid attributes (e.g., via Cypress or Playwright). No tests included here, but the structure supports them.
 Deployment
 Hosted on Netlify or GitHub Pages.
-Live URL: https://example-live-url.netlify.app
+Live URL: https://slattprofilecard.netlify.app
 Repo: https://github.com/slattware/profile_card
