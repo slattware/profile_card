@@ -1,0 +1,193 @@
+/* styles.css */
+:root {
+  --primary-color: #4A90E2;
+  --text-color: #333;
+  --bg-color: #f9f9f9;
+  --border-color: #ddd;
+  --focus-outline: 2px solid var(--primary-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.avatar-container {
+  margin: 0;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+.user-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.user-bio {
+  text-align: center;
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+.user-time {
+  text-align: center;
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: #666;
+  background: #f0f0f0;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-link {
+  display: block;
+  padding: 0.75rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background: #357ABD;
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+.list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  gap: 0.25rem;
+}
+
+.list li {
+  margin-bottom: 0.25rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .profile-card {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+  
+  .card-header {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+  }
+  
+  .user-name {
+    margin-top: 0.5rem;
+    font-size: 1.75rem;
+  }
+  
+  .user-bio {
+    text-align: left;
+  }
+  
+  .social-list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .social-link {
+    flex: 1;
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .profile-card {
+    padding: 1.5rem;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .social-list {
+    flex-direction: column;
+  }
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* Ensure word wrapping for long content */
+.user-bio,
+.social-link {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}

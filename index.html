@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <main>
+    <article class="profile-card" data-testid="test-profile-card">
+      <div class="card-header">
+        <figure class="avatar-container">
+          <img 
+            src="myself.jpeg" 
+            alt="Profile photo of John Doe" 
+            data-testid="test-user-avatar"
+            class="avatar"
+          >
+        </figure>
+        <h2 data-testid="test-user-name" class="user-name">John Doe</h2>
+      </div>
+      
+      <p data-testid="test-user-bio" class="user-bio">
+        This is a short bio about myself. Not a lot to see here if we're being honest. <br> Nevertheless, I should make the reader aware that I got into programming becuase i was fascinated with the idea of being able to build literally anything using computers. Outside of this, I enjoy eating, listening to and creating music and anything else you imagine I must enjoy.      </p>
+      </p>
+      <p data-testid="test-user-time" class="user-time">
+        
+      </p>
+      
+      <nav class="social-links" data-testid="test-user-social-links" aria-label="Social media links">
+        <ul class="social-list">
+          <li>
+            <a 
+              href="https://x.com/slattware" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              data-testid="test-user-social-twitter"
+              class="social-link"
+            >
+              X
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://linkedin.com/in/boluwatifeolusi" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              data-testid="test-user-social-linkedin"
+              class="social-link"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://github.com/slattware" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              data-testid="test-user-social-github"
+              class="social-link"
+            >
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <section class="hobbies-section">
+        <h3>Hobbies</h3>
+        <ul data-testid="test-user-hobbies" class="list">
+          <li>Coding open-source projects</li>
+          <li>Reading sci-fi novels</li>
+          <li>Eating plantain chips</li>
+        </ul>
+      </section>
+      
+      <section class="dislikes-section">
+        <h3>Dislikes</h3>
+        <ul data-testid="test-user-dislikes" class="list">
+          <li>Garlic</li>
+          <li>Hunger</li>
+          <li>Heat</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
